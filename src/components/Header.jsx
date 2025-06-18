@@ -9,7 +9,7 @@ import MenuSvg from "../assets/svg/MenuSvg";
 
 const Header = () => {
   const pathname = useLocation(); // Correct usage
-  const [openNavigation, setOpenNavigation] = useState(true);
+  const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
     // setOpenNavigation(!openNavigation);
@@ -51,7 +51,7 @@ const Header = () => {
               <a
                 key={item.id}
                 href={item.url}
-                onclick={handleClick}
+                onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors
                   hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""}
                   px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold
